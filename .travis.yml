@@ -26,6 +26,28 @@ matrix:
     env: DCS="raft" TEST_SUITE="behave"
   - python: "3.6"
     env: DCS="kubernetes" TEST_SUITE="behave"
+#Added power jobs
+  - python: "3.5"
+    arch: ppc64le
+    env: PYVERSIONS="2.7 3.5 3.6" TEST_SUITE="python setup.py"
+  - python: "3.6"
+    arch: ppc64le
+    env: DCS="etcd" TEST_SUITE="behave"
+  - python: "3.6"
+    arch: ppc64le
+    env: DCS="etcd3" TEST_SUITE="behave"
+  - python: "3.6"
+    arch: ppc64le
+    env: DCS="exhibitor" TEST_SUITE="behave"
+  - python: "3.6"
+    arch: ppc64le
+    env: DCS="consul" TEST_SUITE="behave"
+  - python: "3.6"
+    arch: ppc64le
+    env: DCS="raft" TEST_SUITE="behave"
+  - python: "3.6"
+    arch: ppc64le
+    env: DCS="kubernetes" TEST_SUITE="behave"
 branches:
   only:
   - master
